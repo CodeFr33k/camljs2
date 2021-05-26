@@ -1,0 +1,3 @@
+[submodule "github.com/CodeFr33k/js-csp"]
+	path = github.com/CodeFr33k/js-csp
+	url = git@github.com:CodeFr33k/js-csp.git

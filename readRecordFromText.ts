@@ -22,6 +22,8 @@ export default (chan) => {
                 const token = /token = (.*)/.exec(recordAsText);
                 const image = /@image = (.*)/.exec(recordAsText);
                 const width = /@width = (.*)/.exec(recordAsText);
+                const height = /@height = (.*)/.exec(recordAsText);
+                const video = /@video = (.*)/.exec(recordAsText);
                 const maxWidth = /@max-width = (.*)/.exec(recordAsText);
                 const record = {
                     lines,
@@ -29,7 +31,9 @@ export default (chan) => {
                     created: created && created[1],
                     token: token && token[1],
                     image: image && image[1],
+                    video: video && video[1],
                     width: width && width[1],
+                    height: height && height[1],
                     maxWidth: maxWidth && maxWidth[1],
                 };
                 yield csp.put(result, record); 
